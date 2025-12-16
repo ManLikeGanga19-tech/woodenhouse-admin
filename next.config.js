@@ -8,6 +8,9 @@ const withPWA = require("next-pwa")({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
+
+  // ✅ REQUIRED FOR NEXT 16 + VERCEL + WEBPACK PLUGINS
+  turbopack: {},
 };
 
 module.exports = withPWA(nextConfig);
